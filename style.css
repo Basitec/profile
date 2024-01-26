@@ -69,18 +69,21 @@ div.wrap button{
     cursor: pointer;
 }
 @media (max-width:400px){
-    section{
-        display: grid;
-        grid-template-columns: 1fr;
-        font-size: medium;
-        width: 100%;
-        overflow: hidden;
-        /* padding: 0; */
-        /* text-align: left; */
-        align-items: center;
-        margin: 0 0em;
-        /* padding: 10px; */
-    }
+.show{
+    font-family: 'komika axis';
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    margin: 0 auto;
+    color: #fff;
+    background-image: linear-gradient(to right,#ff3344,#3344ff,#6a73de);
+    font-size: large;
+    padding: 20px;
+    border-radius: 30px;
+}
+section{
+    display: none;
+}
     /* h1{
         font-size: 1.5em;
         width: 10em;
