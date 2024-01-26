@@ -3,9 +3,12 @@ let id = document.querySelector("span.id")
 let repos = document.querySelector("span.page")
 let followers = document.querySelector("span.follo")
 let following = document.querySelector(".following")
-
-let FetchGithubData = (user)=>{
-    let url = "https://api.github.com/users/"+user
+let input =document.querySelector("input")
+let button = document.querySelector("button")
+let section = document.querySelector("section")
+let FetchGithubData = ()=>{
+    button.addEventListener("click",function () {
+    let url = "https://api.github.com/users/"+input.value
     let newXMLOBJECT = new XMLHttpRequest()
     newXMLOBJECT.open("Get",url)
     newXMLOBJECT.onload= populateCard
@@ -22,11 +25,11 @@ let FetchGithubData = (user)=>{
     followers.innerHTML=dob.followers
     userName.innerHTML=dob.login
     following.innerHTML=dob.following
+    section.classList.add("show")
+    button.classList.add("hide")
+    input.classList.add("hide")
+
 }
+    })
 }
-let name = prompt("Enter Your Github Username")
-FetchGithubData(name)
-// public_repos
-    // let dob = JSON.parse(newXMLOBJECT.response)
-    // let user = prompt("Enter")
-// console.log(newXMLOBJECT)
+FetchGithubData()
