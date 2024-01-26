@@ -45,7 +45,7 @@ h1{
         display: grid;
         grid-template-columns: 1fr;
         font-size: medium;
-        width: 55%;
+        width: 100%;
         overflow: hidden;
         /* padding: 0; */
         /* text-align: left; */
@@ -53,9 +53,9 @@ h1{
         margin: 0 0em;
         /* padding: 10px; */
     }
-    h1{
+    /* h1{
         font-size: 1.5em;
         width: 10em;
-        /* text-align: left; */
-    }
+        /* text-align: left; 
+    } */
 }
