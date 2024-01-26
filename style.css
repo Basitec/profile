@@ -73,7 +73,7 @@ div.wrap button{
         font-family: 'komika axis';
         display: grid;
         grid-template-columns: 1fr;
-        width: 100%;
+        width: 90%;
         margin: 0 0;
         color: #fff;
         background-image: linear-gradient(to right,#ff3344,#3344ff,#6a73de);
