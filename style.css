@@ -15,7 +15,7 @@ span{
     -moz-text-fill-color: transparent; 
     color: #fff;
 }
-section{
+.show{
     font-family: 'komika axis';
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,6 +26,12 @@ section{
     font-size: large;
     padding: 20px;
     border-radius: 30px;
+}
+section{
+    display: none;
+}
+.hide{
+    display: none;
 }
 img{
     width: 7em;
@@ -39,6 +45,27 @@ h1{
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
+}
+div.wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 30%;
+}
+div.wrap input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    outline: none;
+    /* background-image: linear-gradient(45deg,#6a73de,#3344ff,#ff3344 ); */
+
+}
+div.wrap button{
+    padding: 10px;
+    background-image: linear-gradient(45deg,#6a73de,#3344ff,#ff3344 );
+    border: 0;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
 }
 @media (max-width:400px){
     section{
