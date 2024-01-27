@@ -4,7 +4,7 @@ let repos = document.querySelector("span.page")
 let followers = document.querySelector("span.follo")
 let following = document.querySelector(".following")
 let input =document.querySelector("input")
-let button = document.querySelector("button")
+let button = document.querySelector("div.wrap button")
 let section = document.querySelector("section")
 let FetchGithubData = ()=>{
     button.addEventListener("click",function () {
@@ -18,8 +18,6 @@ let FetchGithubData = ()=>{
     let idd = dob.id;
     let h1 = document.querySelector("h1")
     h1.innerHTML=dob.login+"'s Github Profile Card"
-    let img = document.querySelector("img")
-    img.src="https://avatars.githubusercontent.com/u/"+idd+"?v=4"
     id.innerHTML=dob.id
     repos.innerHTML=dob.public_repos
     followers.innerHTML=dob.followers
@@ -28,6 +26,21 @@ let FetchGithubData = ()=>{
     section.classList.add("show")
     button.classList.add("hide")
     input.classList.add("hide")
+    function downloadBusinessCard() {
+        let section1 = document.querySelector("section.show")
+        let img = document.querySelector("img")
+        img.src="https://avatars.githubusercontent.com/u/"+idd+"?v=4"
+        html2canvas(section1).then(canvas => {
+            const dataURL = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.href = dataURL;
+            link.download = dob.login+"'s profile card.png";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+downloadBusinessCard()    
 
 }
     })
