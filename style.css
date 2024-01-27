@@ -8,15 +8,15 @@ div.profilee{
     grid-template-columns: 1fr 1fr;
 }
 span{
-   background-image: linear-gradient(#fff,#ff0 );
+   /* background-image: linear-gradient(#fff,#ff0 );
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;  */
     color: #fff;
 }
 .show{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'komika axis';
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 50%;
@@ -32,6 +32,7 @@ section{
 }
 .hide{
     display: none;
+    /* margin: 0 auto; */
 }
 img{
     width: 7em;
@@ -50,7 +51,7 @@ div.wrap{
     display: grid;
     grid-template-columns: 1fr;
     width: 30%;
-    margin:0 auto;
+    margin: 0em auto;
 }
 div.wrap input{
     padding: 10px;
@@ -73,7 +74,7 @@ div.wrap button{
         font-family: 'komika axis';
         display: grid;
         grid-template-columns: 1fr;
-        width: 90%;
+        width: 100%;
         margin: 0 0;
         color: #fff;
         background-image: linear-gradient(to right,#ff3344,#3344ff,#6a73de);
